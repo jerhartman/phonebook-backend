@@ -1,0 +1,36 @@
+// fly.io requests -------------------------------------
+
+// get request for all persons
+GET https://phonebook-demo.fly.dev/api/persons
+
+###
+
+// post request to add amy
+POST https://phonebook-demo.fly.dev/api/persons
+Content-Type: application/json
+
+{
+  "name": "amy",
+  "number": "12348"
+}
+
+### // local host requests ---------------------------------
+
+// send get request for all persons
+GET http://localhost:3001/api/persons
+
+###
+
+// send post request for a new person
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "amy 2",
+  "number": "12348"
+}
+
+###
+
+// send delete request for perosn with id 4
+DELETE http://localhost:3001/api/persons/4
