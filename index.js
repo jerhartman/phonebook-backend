@@ -11,6 +11,9 @@ const app = express();
 // create body token for morgan logs
 morgan.token('body', (req) => JSON.stringify(req.body));
 
+// use build/index.html when root is fetched
+app.use(express.static('build'))
+
 // use middleware to parse response json, log with morgan, and change origin policy with cors
 app.use(express.json());
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms :body'));
